@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/research-insulin-dopamine/static/css/main.ec7cc2af.css",
-    "main.js": "/research-insulin-dopamine/static/js/main.74b279e3.js",
+    "main.js": "/research-insulin-dopamine/static/js/main.d352b78a.js",
     "static/js/592.fe81a422.chunk.js": "/research-insulin-dopamine/static/js/592.fe81a422.chunk.js",
     "static/media/lab-hero2.png": "/research-insulin-dopamine/static/media/lab-hero2.1997ef7cdeb30ddf01e7.png",
     "static/media/lab-brain1.png": "/research-insulin-dopamine/static/media/lab-brain1.eb6d0375b9280fbf66fc.png",
     "index.html": "/research-insulin-dopamine/index.html",
     "main.ec7cc2af.css.map": "/research-insulin-dopamine/static/css/main.ec7cc2af.css.map",
-    "main.74b279e3.js.map": "/research-insulin-dopamine/static/js/main.74b279e3.js.map",
+    "main.d352b78a.js.map": "/research-insulin-dopamine/static/js/main.d352b78a.js.map",
     "592.fe81a422.chunk.js.map": "/research-insulin-dopamine/static/js/592.fe81a422.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ec7cc2af.css",
-    "static/js/main.74b279e3.js"
+    "static/js/main.d352b78a.js"
   ]
 }
