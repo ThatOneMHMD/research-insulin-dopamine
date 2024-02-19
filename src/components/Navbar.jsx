@@ -175,7 +175,7 @@ const NavBar = ({ activeTab, setActiveTab }) => {
 
         <ul className="menu-compound-links menuInsideClick">
           <li>  
-            <Link to={process.env.PUBLIC_URL + "/home"} className={isLinkActive('/home') ? "active" : ""}>Home</Link>
+            <Link to={process.env.PUBLIC_URL + "/home#hero"} className={isLinkActive('/home#hero') ? "active" : ""}>Home</Link>
           </li>
           
           {isDefaultPath() ? (
