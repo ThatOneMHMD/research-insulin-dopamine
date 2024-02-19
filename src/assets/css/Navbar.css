@@ -1,0 +1,333 @@
+:root {
+    --primary-color: #1a1a1a; /* Dark Gray */
+    --secondary-color: #ccc; /* Light Gray */
+    --active-color: #ffffff; /* White */
+    --highlight-color:  #009999; /* Dark Cyan */
+    --background-color: #000000; /* Black */
+}
+
+
+
+.hamburgerMenueIcon{
+    width: 25px;
+    height: 25px;
+    color: var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+ 
+.main-icon{
+    width: 30px;
+    height: 30px;
+    fill: var(--active-color);
+}
+
+.main-iconDiv{
+    margin: 0 10px;
+}
+
+.donationIcon{
+    width: 55px;
+    height: 55px;
+    padding-bottom: 5px;
+}
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 6vh;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* colour was primary before */
+    background-color: var(--background-color);
+    border-bottom: var(--secondary-color) 2px solid;
+}
+
+.hamburgerMenueIconDiv{
+    display: none;
+    margin: 0 20px;
+}
+
+.whyIslamIconDiv{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cartIconDiv,
+.socialMediaDiv,
+.donationIconDiv {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links li {
+    margin: 0 10px;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* remove this? maybe makes website more professional... */
+.navbar-links li a.active {
+    color: var(--active-color);
+}
+
+.navbar-links li a:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+
+.cartIconDiv img:hover {
+    cursor: pointer;
+}
+
+.hamburgerMenueIcon:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+    transform: rotate(180deg);
+}
+
+
+/* Edit so that clicks do not work!! */
+.menuContainer-background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    z-index: 9;
+    transition: opacity 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    backdrop-filter: blur(10px);
+    
+    pointer-events: none; 
+    overflow: hidden;
+    transition: transform 0.3s ease; 
+}
+
+/* use this as a coinditional statement for when menuVisible is true */
+.blurred-background {
+  backdrop-filter: blur(10px); 
+  pointer-events: none; 
+  overflow: hidden;
+  transition: transform 0.3s ease; 
+}
+
+.menuContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 200px; 
+  height: 100vh; 
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 20px;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2); 
+  display: flex;
+  flex-direction: column;
+
+  /* animations */
+  transition: transform 0.5s ease; 
+  transform: translateX(0);
+}
+
+.menuContainer-hide{
+    transform: translateX(-120%);
+}
+
+.menuContainer ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuContainer li {
+  margin-bottom: 10px; /* Adjust spacing between menu items */
+}
+
+.menu-socials li a{
+    list-style: none;
+    text-decoration: none;
+    margin: 0 5px;
+    color: var(--primary-color);
+}
+
+.menu-socials li a:hover{
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+
+.x-symbolDiv{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.compound-x-symbolDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.x-symbol, .compound-x-symbol{
+    width: 25px;
+    height: 25px;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.x-symbol:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+    transform: rotate(180deg);
+}
+
+.compound-x-symbol:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+
+
+.no-image-icon:hover::after {
+    content: "Try searching again";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+
+@media (max-width: 767px) {
+    .navbar-links, .socialMediaDiv {
+        display: none;
+    }
+
+    .cartIconDiv,
+    .socialMediaDiv,
+    .donationIconDiv {
+        margin: 0 20px;
+    }
+
+    .whyIslamIconDiv{
+        position: static;
+        left: auto;
+        transform: none;
+    }
+
+    .hamburgerMenueIconDiv{
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .menu-links{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-links li {
+        margin-bottom: 20px;
+        
+    }
+    
+    .menu-links li a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+    
+    .menu-links li a:hover {
+        cursor: pointer;
+        color: var(--highlight-color);
+    }
+
+    .menu-whyIslamIconDiv{
+        margin-top: 20px;
+        background-color: var(--primary-color);
+        width: 100%;
+        
+    }
+
+    .menu-compound-links{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-compound-links li {
+        margin-bottom: 20px;
+        justify-content: space-between; 
+    }
+    
+    .menu-compound-links li a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: bold;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu-compound-links li a:hover {
+        cursor: pointer;
+        color: var(--highlight-color);
+    }
+
+    .compound-donation-links{
+        list-style: none;
+        display: flex;
+    }
+
+    .compound-donation-links li {
+        display: flex;
+        margin-bottom: 20px;
+        flex-wrap: nowrap;
+        justify-content: space-between; 
+        align-items: center;
+    }
+    
+    .compound-donation-links li a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: bold;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .compound-donation-links li a:hover {
+        cursor: pointer;
+        color: var(--highlight-color);
+    }
+
+}
+

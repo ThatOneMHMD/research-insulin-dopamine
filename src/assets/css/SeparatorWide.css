@@ -1,0 +1,33 @@
+:root {
+    --primary-color: #1a1a1a; /* Dark Gray */
+    --secondary-color: #ccc; /* Light Gray */
+    --active-color: #ffffff; /* White */
+    --highlight-color:  #009999; /* Dark Cyan */
+    --background-color: #000000; /* Black */
+}
+
+.separatorWideContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: -1;
+    /* margin: 10px 0; */
+}
+
+.separatorWideLine {
+  border-top: 50px solid var(--background-color); 
+  /* margin-top: 10px; */
+  /* margin: 20px 0; */
+
+  z-index: -1;
+
+  
+
+  width: 110vw;
+  overflow-x: hidden;
+}
+
+
+
+

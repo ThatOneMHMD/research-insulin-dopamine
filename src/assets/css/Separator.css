@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #1a1a1a; /* Dark Gray */
+    --secondary-color: #ccc; /* Light Gray */
+    --active-color: #ffffff; /* White */
+    --highlight-color:  #009999; /* Dark Cyan */
+    --background-color: #000000; /* Black */
+}
+
+.separatorContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 0;
+    z-index: -1;
+}
+
+.separatorLine {
+  border-top: 10px solid var(--primary-color);
+  margin: 20px 0;
+
+  width: 110vw;
+  overflow-x: hidden;
+}
+
+/* .rotate+5{
+    transform: rotate(5deg);
+}
+
+.rotate-5{
+    transform: rotate(-5deg);
+} */

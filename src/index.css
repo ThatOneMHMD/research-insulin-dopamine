@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* if there are any issues in the navbar, remove this */
+/* this was for the purpose of removing the homeNavbar animation's navbar */
+html {
+  overflow-x: clip;
+  /* height: 100vh; */
+  width: 100vw;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'sans-serif', 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+/* .maxComponentHeight{
+  padding-top: 6rem;
+  min-height: 85vh;
+  margin: 0 2vw;
+} */
+

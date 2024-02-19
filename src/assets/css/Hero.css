@@ -1,0 +1,111 @@
+/* :root {
+    --primary-color: #1a1a1a; 
+    --secondary-color: #cccccc; 
+    --active-color: #ffffff; 
+    --highlight-color:  #00cccc; 
+    --background-color: #000000; 
+} */
+
+#hero{
+    transition: color 0.3s ease; 
+}
+
+#about{
+    transition: color 0.3s ease; 
+}
+
+#contact{
+    transition: color 0.3s ease; 
+}
+
+.hero {
+    background-image: url('../images/lab-hero2.png'); 
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 1.2rem;
+    
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    /* navbar takes 6vh */
+    height: 98vh;
+    width: 100%;
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    color: var(--active-color);
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 1rem;
+
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.heroBtn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--highlight-color);
+    color: var(--active-color);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+
+}
+
+.heroBtn:hover {
+    background-color: var(--secondary-color);
+    box-shadow: var(--highlight-color) 0px 0px 10px;  
+}
+
+
+/* 
+.heroBorder {
+
+    border-bottom: 50px solid var(--highlight-color);
+    width: 110vw;
+    overflow-x: hidden;
+    z-index: 10;
+    rotate: -5deg;
+    
+} */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        align-items: start;
+        padding-top: 5rem;
+        /* change this? */
+        /* height: 98vh; */
+
+    }
+
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+
+    .hero-content p {
+     font-size: 1rem;
+    }
+
+    .heroBtn {
+        padding: 0.8rem 1.6rem;
+        margin-bottom: 1.5rem;
+        
+    }
+}
+

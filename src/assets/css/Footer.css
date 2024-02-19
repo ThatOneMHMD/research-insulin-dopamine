@@ -1,0 +1,97 @@
+/* :root {
+    --primary-color: #1a1a1a; 
+    --secondary-color: #cccccc; 
+    --active-color: #ffffff; 
+    --highlight-color:  #00cccc; 
+    --background-color: #000000; 
+} */
+
+
+.footer-container {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    /* colour was primary */
+    background-color: var(--background-color);
+    height: 10vh;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+.footer-links li {
+    margin: 0 10px 10px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* remove this? maybe makes website more professional... */
+.footer-links li a.active {
+    color: var(--active-color);
+}
+
+.footer-links li a:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.copyright{
+    display: flex;
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: bold;
+    /* margin-bottom: 50px; */
+}
+
+.footer-donation-links{
+    list-style: none;
+    display: flex;
+}
+
+.footer-donation-links li {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.footer-donation-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-donation-links li a:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+
+/* icon commented out */
+.footerDonateIcon {
+    color: var(--secondary-color);
+}
+
+
+
