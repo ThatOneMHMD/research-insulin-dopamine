@@ -175,7 +175,7 @@ const NavBar = ({ activeTab, setActiveTab }) => {
 
         <ul className="menu-compound-links menuInsideClick">
           <li>  
-            <a href={process.env.PUBLIC_URL + "/home"} className={isLinkActive('/home') ? "active" : ""}>Home</a>
+            <Link to={process.env.PUBLIC_URL + "/home"} className={isLinkActive('/home') ? "active" : ""}>Home</Link>
           </li>
           
           {isDefaultPath() ? (
@@ -226,7 +226,7 @@ const NavBar = ({ activeTab, setActiveTab }) => {
       
       <ul className="navbar-links">
         <li>
-          <a href={process.env.PUBLIC_URL + "/home#hero"} onClick={scrollToTop} className={isLinkActive('/home#hero') ? "active" : ""}>Home</a>
+          <Link to={process.env.PUBLIC_URL + "/home#hero"} onClick={scrollToTop} className={isLinkActive('/home#hero') ? "active" : ""}>Home</Link>
         </li>
 
         {isDefaultPath() ? (

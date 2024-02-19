@@ -1,3 +1,4 @@
+// use HashRouter for github pages???
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React, { useState} from "react";
 import './App.css';
@@ -35,6 +36,7 @@ function App() {
 
             {/* Navbar and Compound Navbar*/}
             <Route path="/" element={<Home />} />     
+            <Route path={process.env.PUBLIC_URL} element={<Home />} /> 
             <Route path="/home" element={<Home />} />  
 
             <Route path="/about" element={<About />} /> 
