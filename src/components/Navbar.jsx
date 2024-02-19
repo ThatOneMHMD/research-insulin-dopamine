@@ -26,8 +26,10 @@ const NavBar = ({ activeTab, setActiveTab }) => {
 
   // Function to check if the current location matches the default path
   const isDefaultPath = () => {
-    return location.pathname === '/' || location.pathname === '/home' || location.pathname === '/home/' || location.pathname === '';
+    return location.pathname === '/' || location.pathname === '/home' || location.pathname === '/home/' || location.pathname === '/research-insulin-dopamine/' || location.pathname === '/research-insulin-dopamine' || location.pathname === '';
   }; 
+
+  // research-insulin-dopamine/
   
   // State to track the menus visibility
   const [menuVisible, setMenuVisible] = useState(false);
@@ -173,7 +175,7 @@ const NavBar = ({ activeTab, setActiveTab }) => {
 
         <ul className="menu-compound-links menuInsideClick">
           <li>  
-            <a href="/home" className={isLinkActive('/home') ? "active" : ""}>Home</a>
+            <a href={process.env.PUBLIC_URL + "/home"} className={isLinkActive('/home') ? "active" : ""}>Home</a>
           </li>
           
           {isDefaultPath() ? (
@@ -224,7 +226,7 @@ const NavBar = ({ activeTab, setActiveTab }) => {
       
       <ul className="navbar-links">
         <li>
-          <a href="/home#hero" onClick={scrollToTop} className={isLinkActive('/home#hero') ? "active" : ""}>Home</a>
+          <a href={process.env.PUBLIC_URL + "/home#hero"} onClick={scrollToTop} className={isLinkActive('/home#hero') ? "active" : ""}>Home</a>
         </li>
 
         {isDefaultPath() ? (
@@ -260,7 +262,7 @@ const NavBar = ({ activeTab, setActiveTab }) => {
       {/* main website icon */}
 
       <div className='main-iconDiv'>
-        <a href="/home" className={isLinkActive('/home') ? "active" : ""}>
+        <Link to="/home" className={isLinkActive('/home') ? "active" : ""}>
 
           <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="15px" height="15px" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet" className='main-icon'>
             <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" stroke="none">
@@ -277,7 +279,7 @@ const NavBar = ({ activeTab, setActiveTab }) => {
             </g>
           </svg>
 
-        </a>
+        </Link>
       </div>
 
       <ul className="navbar-links">
