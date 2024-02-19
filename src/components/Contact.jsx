@@ -110,7 +110,7 @@ const Contact = () => {
                     
                     {/* ORRR maybe remove phone and email and simply keep hte contact form as means of comunication? Ask prof... */}
 
-                    <div className='contact-info'>
+                    <div className='contact-info'> 
                         <p><strong>Supervisor: Dr. Rodrigo Mansur</strong></p>
 
                         <p> <strong>Phone:</strong> 416-603-5106</p>
