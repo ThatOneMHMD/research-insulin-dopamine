@@ -75,7 +75,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+
+    /* align items was center before; was changed to allow for a better contact component. Fix if needed */
+    align-items: start;
     margin: 1rem 0;
     width: 100%;
 }
@@ -83,6 +85,51 @@
 .contact-intro, .contact-info, .contact-info-title{
     text-align: left !important;
 }
+
+.margin-bottom{
+    margin-bottom: 1rem;
+}
+
+.borders-bottom-top{
+    border-top: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    padding: .5rem 0;
+    /* background-color: var(--secondary-color); */
+    /* border-radius: 5px; */
+}
+
+
+/* Hide the default radio button */
+.radio-input {
+   
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.radio-input:after {
+    content: '';
+    display: inline-block;
+
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--background-color); 
+    margin: 0 0 3px 15px;
+    vertical-align: middle;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked:after{
+    background-color: var(--highlight-color);
+}
+
+/* .radio-input:checked {
+    background-color: #007bff; 
+    
+} */
 
 .contact-info{
     display: flex;
@@ -273,4 +320,30 @@
         width: 90%;
         margin: 0;
     }
+
+    .space-between{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 283px) and (max-width: 321px) {
+    .flex-column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+ 
+    .space-between{
+        display: flex;
+        align-items: space-between;
+        justify-content: space-between;
+        padding: 0 auto;
+        width: 35%; 
+    }
+
+    .radio-input:after {
+        margin-left: 0;
+    }
+
 }

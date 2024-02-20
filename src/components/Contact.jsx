@@ -13,16 +13,22 @@ const Contact = () => {
         name: '',
         email: '',
         message: '',
+        phone: '',
+        preferredContact: '',
     });
 
     const [requiredFields, setRequiredFields] = useState({
         name: false,
         email: false,
         message: false,
+        phone: false,
+        preferredContact: false,
     });
 
     const [submissionStatus, setSubmissionStatus] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [preferredContactRequired, setPreferredContactRequired] = useState(false);
+    const [phoneError, setPhoneError] = useState(false);
 
 
     const handleBlur = (e) => {
@@ -48,8 +54,28 @@ const Contact = () => {
         }));
     };
 
+    // validate phone number input; gives true or false
+    const validatePhoneNumber = (input_str) => {
+        const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+        return re.test(input_str);
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Check if the preferred contact method is selected
+        if (!formData.preferredContact) {
+            // setSubmissionStatus('Please select a preferred contact method.');
+            setPreferredContactRequired(true);
+            return;
+        }
+        
+        // validate phone number input
+        const { phone } = formData;
+        if (!validatePhoneNumber(phone)) {
+            setPhoneError(true);
+            return;
+        }
 
         // Set loading to true when the form is being submitted
         setLoading(true);
@@ -68,6 +94,8 @@ const Contact = () => {
                 name: '',
                 email: '',
                 message: '',
+                phone: '',
+                preferredContact: '',
             });
             },
             (error) => {
@@ -78,6 +106,8 @@ const Contact = () => {
         .finally(() => {
             // Reset loading state whether it's successful or failed
             setLoading(false);
+            setPreferredContactRequired(false);
+            setPhoneError(false);
         });
 
         setTimeout(() => {
@@ -129,7 +159,13 @@ const Contact = () => {
 
                 </div>
 
+
+
                 <div className='contact-form-content'>
+
+                    <div className='contact-intro margin-bottom'>
+                        For quicker responses, use the contact form below to send us your message.
+                    </div>
 
                     <form onSubmit={handleSubmit} className="contact-form">
                         <div className='contact-form-element'>
@@ -162,10 +198,81 @@ const Contact = () => {
                             onChange={handleChange}
                             onBlur={handleBlur}
                             required
+                            title="Please enter a valid email address"
                             className="contact-input"
                             />
                             {requiredFields.email && (
                             <p className="required-field-notification">Email is required</p>
+                            )}
+                        </div>
+                        <div className='contact-form-element'>
+                            <label htmlFor="phone" className="contact-label">
+                                Phone:
+                            </label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                required
+                                title="Please enter a valid phone number"
+                                className="contact-input"
+                            />
+                            {requiredFields.phone && (
+                                <p className="required-field-notification">Phone number is required</p>
+                            )}
+                            {phoneError && (
+                                <p className="required-field-notification">Please enter a valid phone number</p>
+                            )}
+                        </div>
+                        <div className='contact-form-element margin-bottom borders-bottom-top'>
+                            <label className="contact-label">
+                                Preferred Contact Method:
+                            </label>
+                            <div className='flex-column'>
+                                <label className='space-between'>
+                                    <input
+                                        type="radio"
+                                        name="preferredContact"
+                                        value="email"
+                                        checked={formData.preferredContact === "email"}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        className="radio-input"
+                                    /> Email
+                                </label>
+                                <label className='space-between'>
+                                    <input
+                                        type="radio"
+                                        name="preferredContact"
+                                        value="phone"
+                                        checked={formData.preferredContact === "phone"}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        className="radio-input"
+                                    /> Phone
+                                </label>
+                                <label className='space-between'>
+                                    <input
+                                        type="radio"
+                                        name="preferredContact"
+                                        value="both"
+                                        checked={formData.preferredContact === "both"}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        className="radio-input"
+                                    /> Both
+                                </label>
+                            </div>
+                            {/* {requiredFields.preferredContact && (
+                                <p className="required-field-notification">Preferred contact method is required</p>
+                            )} */}
+
+                            {/* The method above does not work for this one... */}
+                            {preferredContactRequired && (
+                                <p className="required-field-notification">Preferred contact method is required</p>
                             )}
                         </div>
                         <div className='contact-form-element'>
