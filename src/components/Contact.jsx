@@ -60,6 +60,20 @@ const Contact = () => {
         return re.test(input_str);
     };
 
+
+
+
+    // SET a limit of 200 messages per month for the free plan.
+
+    
+
+
+
+
+
+
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
 

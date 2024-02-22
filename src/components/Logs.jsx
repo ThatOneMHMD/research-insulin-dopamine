@@ -7,21 +7,8 @@ const Logs = () => {
 
   const initialLogs  = [
     { id: 1, title: 'Week 1 Log', date: "05 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-05Feb2024.pdf' },
-
-
-
-    // actually work on this, and the real file as well, then change the links accordingly!
     { id: 2, title: 'Week 2 Log', date: "12 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-12Feb2024.pdf' },
-
-
-    // // delete this: this was for the sole purpose of testing the sorting
-    // { id: 3, title: 'Week 3 Log', date: "05 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-05Feb2024.pdf' },
-    // { id: 4, title: 'Week 4 Log', date: "05 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-05Feb2024.pdf' },
-    // { id: 5, title: 'Week 45 Log', date: "05 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-05Feb2024.pdf' },
-    // { id: 6, title: 'Week 46 Log', date: "05 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-05Feb2024.pdf' },
-    // { id: 7, title: 'Week 47 Log', date: "05 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-05Feb2024.pdf' },
-    // { id: 8, title: 'Week 48 Log', date: "05 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-05Feb2024.pdf' },
-
+    { id: 3, title: 'Week 3 Log', date: "19 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-19Feb2024.pdf' },
 
   ];
 

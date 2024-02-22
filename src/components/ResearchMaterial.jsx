@@ -4,13 +4,9 @@ import SeparatorWide from './SeparatorWide.jsx';
 
 const ResearchMaterial = () => {
   const initialMaterials = [
-    { id: 1, title: 'Preliminary List of Research Articles', date: "05 Feb 2024", description: 'This file contains a preliminary list of research articles discussing the interactions between insulin and dopamine signalling. These articles will be used as source materials for the main paper.', url: process.env.PUBLIC_URL + '/researchPDFs/research-materials-LisofStudies(05Feb2024).pdf' },
-    
+    { id: 1, title: 'Preliminary List of Research Articles', date: "19 Feb 2024", description: 'This file contains a preliminary list of research articles discussing the interactions between insulin and dopamine signalling. These articles will be used as source materials for the main paper.', url: process.env.PUBLIC_URL + '/researchPDFs/Preliminary-List-of-Research-Articles.pdf' },
+    { id: 2, title: 'Guide - How to write a Review Paper', date: "19 Feb 2024", description: 'This guide provides step-by-step instructions for writing a review paper, specifically tailored to exploring insulin and dopamine signaling interaction.', url: process.env.PUBLIC_URL + '/researchPDFs/Guide - How to write a Review Paper.pdf' },
 
-    // // delete this: this was for the sole purpose of testing the sorting
-    // { id: 2, title: '2Preliminary List of Research Articles', date: "05 Feb 2024", description: 'This file contains a preliminary list of research articles discussing the interactions between insulin and dopamine signalling. These articles will be used as source materials for the main paper.', url: process.env.PUBLIC_URL + '/researchPDFs/research-materials-LisofStudies(05Feb2024).pdf' },
-    // { id: 3, title: '3 Research Articles', date: "05 Feb 2024", description: 'This file contains a preliminary list of research articles discussing the interactions between insulin and dopamine signalling. These articles will be used as source materials for the main paper.', url: process.env.PUBLIC_URL + '/researchPDFs/research-materials-LisofStudies(05Feb2024).pdf' },
-    // { id: 4, title: '4 Articles', date: "05 Feb 2024", description: 'This file contains a preliminary list of research articles discussing the interactions between insulin and dopamine signalling. These articles will be used as source materials for the main paper.', url: process.env.PUBLIC_URL + '/researchPDFs/research-materials-LisofStudies(05Feb2024).pdf' },
     
   ];
 
