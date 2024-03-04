@@ -13,7 +13,6 @@ code {
 }
 
 /* if there are any issues in the navbar, remove this */
-/* this was for the purpose of removing the homeNavbar animation's navbar */
 html {
   overflow-x: clip;
   /* height: 100vh; */

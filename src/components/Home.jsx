@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link, useLocation } from "react-router-dom";
 
 import '../assets/css/Home.css';
@@ -11,6 +11,8 @@ import SeparatorWide from './SeparatorWide.jsx';
 
 const Home = () => {
 
+    const location = useLocation();
+
     // smooth scroll to the target section
     const handleSmoothScroll = (event) => {
         event.preventDefault();
@@ -20,6 +22,35 @@ const Home = () => {
             targetElement.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
+    // useEffect(() => {
+    //     // Smooth scroll to the target element when the component mounts
+    //     const smoothScrollToHash = () => {
+    //         const targetId = location.hash;
+    //         if (targetId) {
+    //             setTimeout(() => {
+    //                 const targetElement = document.querySelector(targetId);
+    //                 if (targetElement) {
+    //                     targetElement.scrollIntoView({ behavior: 'smooth' });
+    //                 }
+    //             }, 100); // Delay execution by 100 milliseconds
+    //         }
+    //     };
+    
+    //     smoothScrollToHash();
+    
+    //     // Add event listener to the document to handle smooth scrolling on hash changes
+    //     const handleSmoothScroll = () => {
+    //         smoothScrollToHash();
+    //     };
+    //     window.addEventListener('hashchange', handleSmoothScroll);
+    
+    //     // Clean up the event listener when the component unmounts
+    //     return () => {
+    //         window.removeEventListener('hashchange', handleSmoothScroll);
+    //     };
+    // }, []);
+    
 
     
     return (

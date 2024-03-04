@@ -29,6 +29,41 @@ const NavBar = ({ activeTab, setActiveTab }) => {
     return location.pathname === '/' || location.pathname === '/home' || location.pathname === '/home/' || location.pathname === '/research-insulin-dopamine/' || location.pathname === '/research-insulin-dopamine' || location.pathname === '';
   }; 
 
+  useEffect(() => {
+    console.log('location.pathname: ', location.pathname);
+  }, [location.pathname]);
+
+
+  
+
+  // useEffect(() => {
+  //   // Smooth scroll to the target element when the component mounts
+  //   const smoothScrollToHash = () => {
+  //       const targetId = location.hash;
+  //       if (targetId) {
+  //           setTimeout(() => {
+  //               const targetElement = document.querySelector(targetId);
+  //               if (targetElement) {
+  //                   targetElement.scrollIntoView({ behavior: 'smooth' });
+  //               }
+  //           }, 100); // Delay execution by 100 milliseconds
+  //       }
+  //   };
+
+  //   smoothScrollToHash();
+
+  //   // Add event listener to the document to handle smooth scrolling on hash changes
+  //   const handleSmoothScroll = () => {
+  //       smoothScrollToHash();
+  //   };
+  //   window.addEventListener('hashchange', handleSmoothScroll);
+
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //       window.removeEventListener('hashchange', handleSmoothScroll);
+  //   };
+  // }, []);
+
   // research-insulin-dopamine/
   
   // State to track the menus visibility

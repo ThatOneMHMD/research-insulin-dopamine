@@ -1,6 +1,7 @@
 // use HashRouter for github pages???
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import React, { useState} from "react";
+import React, {useState, useEffect} from "react";
+import { Link, useLocation } from "react-router-dom";
 import './App.css';
 import './index.css';
 import './assets/css/Home.css';
