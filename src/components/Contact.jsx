@@ -15,6 +15,7 @@ const Contact = () => {
         message: '',
         phone: '',
         preferredContact: '',
+        robotCheck: '',
     });
 
     const [requiredFields, setRequiredFields] = useState({
@@ -60,6 +61,10 @@ const Contact = () => {
         return re.test(input_str);
     };
 
+    const handleRobotCheck = (e) => {
+        formData.robotCheck === "robot" ? setFormData((prevData) => ({ ...prevData, robotCheck: '' })) : setFormData((prevData) => ({ ...prevData, robotCheck: 'robot' }));
+    };
+
 
 
 
@@ -76,6 +81,12 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // if the robot check is checked, do not submit the form
+        if (formData.robotCheck) {
+            setSubmissionStatus('our system detected you are a robot. Please try again.');
+            return;
+        }
 
         // Check if the preferred contact method is selected
         if (!formData.preferredContact) {
@@ -306,6 +317,23 @@ const Contact = () => {
                             <p className="required-field-notification">Message is required</p>
                             )}
                         </div>
+
+                        {/* humans can't see this but bots may check the box */}
+                        <div className='personalRobotCheck'>
+                            <label htmlFor="personalRobotCheckBox" className="contact-label">
+                                Are you a robot?
+                            </label>
+                            <input
+                                type="checkbox"
+                                id="personalRobotCheckBox"
+                                name="personalRobotCheckBox"
+                                value="robot"
+                                checked={formData.robotCheck === "robot"}
+                                onClick={handleRobotCheck}                        
+                                className="checkbox-input"
+                            /> I am a robot                   
+                        </div>
+
                         <button type="submit" className={loading ? 'contact-loading' : 'contact-submit'} disabled={loading}>
                             {loading ? 'Sending Message...' : 'Submit'}
                         </button>

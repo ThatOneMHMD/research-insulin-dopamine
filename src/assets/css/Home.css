@@ -98,6 +98,15 @@
     /* border-radius: 5px; */
 }
 
+.personalRobotCheck{
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    font-size: 1px;
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    width: 1px;
+}
 
 /* Hide the default radio button */
 .radio-input {
