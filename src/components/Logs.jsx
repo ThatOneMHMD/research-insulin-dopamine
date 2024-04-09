@@ -9,6 +9,10 @@ const Logs = () => {
     { id: 1, title: 'Week 1 Log', date: "05 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-05Feb2024.pdf' },
     { id: 2, title: 'Week 2 Log', date: "12 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-12Feb2024.pdf' },
     { id: 3, title: 'Week 3 Log', date: "19 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-19Feb2024.pdf' },
+    { id: 4, title: 'Week 4 Log', date: "26 Feb 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-26Feb2024.pdf' },
+    { id: 5, title: 'Week 5 Log', date: "04 Mar 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-04Mar2024.pdf' },
+    { id: 6, title: 'Delay Notice', date: "11 Mar 2024", url: process.env.PUBLIC_URL + '/logPDFs/Log-UploadDelay(11Mar2024).pdf' },
+    { id: 7, title: 'Week 6 Log', date: "08 Apr 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-08Apr2024.pdf' },
 
   ];
 
