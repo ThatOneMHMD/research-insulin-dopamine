@@ -8,6 +8,7 @@ const ResearchMaterial = () => {
     { id: 2, title: 'Guide - How to write a Review Paper', date: "19 Feb 2024", description: 'This guide provides step-by-step instructions for writing a review paper, specifically tailored to exploring insulin and dopamine signaling interaction.', url: process.env.PUBLIC_URL + '/researchPDFs/Guide - How to write a Review Paper.pdf' },
     { id: 3, title: 'Insulin & Dopamine Review Concepts Simplified', date: "26 Feb 2024", description: 'This file aims to simplify concepts pertaining to the research paper, facilitating a more focused search for primary sources', url: process.env.PUBLIC_URL + '/researchPDFs/I&D-ConceptsSimplified(26Feb2024).pdf' },
     { id: 4, title: 'Review Paper Framework/outline: Builder by Questions', date: "08 Apr Feb 2024", description: 'This file creates a simple framework/outline that uses targeted questions to aid in the creation of the review paper.', url: process.env.PUBLIC_URL + '/researchPDFs/ReviewPaperFramework-BuilderbyQuestions.pdf' },
+    { id: 5, title: 'Review Paper Insulin&Dopamine - Early Draft', date: "27 May Feb 2024", description: 'This is the first draft for the entirety of the research paper. This will be refined and adjusted every week until it is ready for submission.', url: process.env.PUBLIC_URL + '/researchPDFs/Review Paper Insulin&Dopamine Early Draft.pdf' },
 
 
   ];
@@ -121,6 +122,13 @@ const ResearchMaterial = () => {
           </div>
         ))}
       </div>
+
+      {/* newly added - week of May 27th */}
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
     </div>
   );
 }

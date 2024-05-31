@@ -14,6 +14,15 @@ const Logs = () => {
     { id: 6, title: 'Delay Notice', date: "11 Mar 2024", url: process.env.PUBLIC_URL + '/logPDFs/Log-UploadDelay(11Mar2024).pdf' },
     { id: 7, title: 'Week 6 Log', date: "08 Apr 2024", url: process.env.PUBLIC_URL + '/logPDFs/log-08Apr2024.pdf' },
 
+
+    { id: 8, title: 'Week 7 Log', date: "15 Apr 2024", url: process.env.PUBLIC_URL + '/logPDFs/Log - Apr 15 2024.pdf' },
+    { id: 9, title: 'Week 8 Log', date: "22 Apr 2024", url: process.env.PUBLIC_URL + '/logPDFs/Log - Apr 22 2024.pdf' },
+    { id: 10, title: 'Week 9 Log', date: "29 Apr 2024", url: process.env.PUBLIC_URL + '/logPDFs/Log - Apr 29 2024.pdf' },
+    { id: 11, title: 'Week 10 Log', date: "06 May 2024", url: process.env.PUBLIC_URL + '/logPDFs/Log - May 06 2024.pdf' },
+    { id: 12, title: 'Week 11 Log', date: "13 May 2024", url: process.env.PUBLIC_URL + '/logPDFs/Log - May 13 2024.pdf' },
+    { id: 13, title: 'Week 12 Log', date: "20 May 2024", url: process.env.PUBLIC_URL + '/logPDFs/Log - May 20 2024.pdf' },
+    { id: 14, title: 'Week 13 Log', date: "27 May 2024", url: process.env.PUBLIC_URL + '/logPDFs/Log - May 27 2024.pdf' },
+
   ];
 
 
@@ -137,6 +146,13 @@ const Logs = () => {
           </div>
         ))}
       </div>
+
+      {/* newly added - week of May 27th */}
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
     </div>
   );
 }

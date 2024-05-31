@@ -45,7 +45,7 @@ function App() {
 
             <Route path="/logs" element={<Logs />} />
             <Route path="/researchMaterial" element={<ResearchMaterial />} /> 
-       
+
 
             {/* Wildcard */}
             <Route path="*" element={<Home />} />
